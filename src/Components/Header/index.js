@@ -1,13 +1,12 @@
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import useOnlineStatus from "../../utils/useOnlineStatus";
+import useOnlineStatus from "../../../utils/useOnlineStatus";
 import logo from "../../images/tastybyte.png";
-import UserContext from "../../utils/UserContext";
+import UserContext from "../../../utils/UserContext";
 import shoppingcart from "../../images/shopping-cart.png";
 import { useSelector } from "react-redux";
 
 export const Header = () => {
-  const [btnNameReact, setBtnNameReact] = useState("Logout");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const onlineStatus = useOnlineStatus();
   const { loggedInUser, setUserName } = useContext(UserContext);
@@ -15,7 +14,7 @@ export const Header = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    setUserName(""); // Clear the username context (assuming setUserName exists in context)
+    setUserName(""); 
     navigate("/");
   };
 
@@ -30,7 +29,7 @@ export const Header = () => {
       </div>
       <div className="lg:hidden relative">
         <button onClick={toggleDropdown} className="text-3xl px-2 py-1 border border-gray-400 rounded">
-          &#9776; {/* Hamburger icon */}
+          &#9776;
         </button>
         {isDropdownOpen && (
           <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg">
@@ -59,7 +58,7 @@ export const Header = () => {
                   type="button"
                   onClick={handleLogout}
                 >
-                  {btnNameReact}
+                  Logout
                 </button>
               </li>
               <li className="px-4 py-2 font-bold hover:bg-gray-200">
@@ -93,7 +92,7 @@ export const Header = () => {
               type="button"
               onClick={handleLogout}
             >
-              {btnNameReact}
+              Logout
             </button>
           </li>
           <li className="px-4 font-bold">Welcome, {loggedInUser}</li>

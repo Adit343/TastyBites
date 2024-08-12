@@ -1,12 +1,12 @@
 import { useDispatch } from "react-redux";
-import { CDN_URL } from "../../utils/constant";
-import { addItem } from "../../utils/cartSlice";
+import { CDN_URL } from "../../../utils/constant";
+import { removeItem } from "../../../utils/cartSlice";
 
-const ItemList = ({ items }) => {
+const CartList = ({ items }) => {
   const dispatch = useDispatch();
 
-  const handleAddItem = (item) => {
-    dispatch(addItem(item));
+  const handleRemoveItem = (item) => {
+    dispatch(removeItem(item));
   };
 
   return (
@@ -14,7 +14,7 @@ const ItemList = ({ items }) => {
       {items.map((item) => (
         <div
           key={item.card.info.id}
-          className="p-2 m-2 border-gray-200 border-b-2 flex flex-col md:flex-row justify-between"
+          className="p-2 m-2 border-gray-200 border-b-2 shadow-lg flex flex-col md:flex-row justify-between"
         >
           <div className="md:w-9/12">
             <div className="py-2 font-bold">
@@ -34,9 +34,9 @@ const ItemList = ({ items }) => {
             />
             <button
               className="p-1 rounded-lg bg-black text-white shadow-lg mt-2 md:mt-0"
-              onClick={() => handleAddItem(item)}
+              onClick={() => handleRemoveItem(item)}
             >
-              Add +
+              Remove -
             </button>
           </div>
         </div>
@@ -45,4 +45,4 @@ const ItemList = ({ items }) => {
   );
 };
 
-export default ItemList;
+export default CartList;

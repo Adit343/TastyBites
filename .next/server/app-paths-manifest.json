@@ -1,7 +1,5 @@
 {
-  "/api/restaurants/route": "app/api/restaurants/route.js",
-  "/api/menu/route": "app/api/menu/route.js",
+  "/custom-builder/page": "app/custom-builder/page.js",
   "/cart/page": "app/cart/page.js",
-  "/body/page": "app/body/page.js",
-  "/restaurants/[resId]/page": "app/restaurants/[resId]/page.js"
+  "/order-tracker/page": "app/order-tracker/page.js"
 }

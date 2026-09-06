@@ -1,11 +1,12 @@
 {
-  "name": "video2",
+  "name": "tasty-bites",
   "version": "1.0.0",
-  "description": "this is namaste react by akshay saini",
+  "description": "TastyBites Next.js React 19 Food Delivery App",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
-    "test": "jest"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc --noEmit"
   },
   "author": "",
   "license": "ISC",
@@ -14,23 +15,22 @@
     "@reduxjs/toolkit": "^2.2.6",
     "bootstrap": "^5.3.3",
     "express": "^4.19.2",
-    "parcel": "^2.12.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-icons": "^5.2.1",
     "react-redux": "^9.1.2",
-    "react-router-dom": "^6.25.1",
     "react-toggle-dark-mode": "^1.1.1"
   },
-  "browserlist": [
-    "last 2 chrome version",
-    "last 2 firefox version"
-  ],
   "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "process": "^0.11.10",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.5.0"
   },
-  "main": "index.js",
   "keywords": []
 }

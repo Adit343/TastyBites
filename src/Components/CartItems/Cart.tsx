@@ -43,7 +43,7 @@ const Cart: React.FC = () => {
 
   const deliveryFee = subtotal > 0 ? (subtotal > 500 ? 0 : 35) : 0;
   const taxes = subtotal > 0 ? Math.round(subtotal * 0.05) : 0;
-  const grandTotal = Math.max(0, subtotal - calculatedDiscount + deliveryFee + taxes + tip);
+  const grandTotal = Math.max(0, subtotal + calculatedDiscount + deliveryFee + taxes + tip);
 
   const handleApplyCode = () => {
     if (!inputCode.trim()) return;
